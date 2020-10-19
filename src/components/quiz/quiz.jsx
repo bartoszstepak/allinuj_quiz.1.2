@@ -40,7 +40,7 @@ export default class Quiz extends React.Component  {
                     }]
                 },
                 {
-                    questionValue:"JAKI JEST WEDŁUG CIEBIE NAJLESZY FILAR?",
+                    questionValue:"JAKI JEST WEDŁUG CIEBIE SUPER EKSTRA NAJLESZY FILAR?",
                     answers:[{
                         value: "sport", key: 2
                     },
