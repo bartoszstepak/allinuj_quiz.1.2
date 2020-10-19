@@ -37,6 +37,18 @@
     float: left;
 }
 
+.quiz_answers img:hover {
+ cursor: pointer;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
 .quiz_answers li {
     font-size: 1.5em;
     list-style-type: none;

@@ -10,6 +10,7 @@ export default class Quiz extends React.Component  {
         super(props)
 
         this.state = {
+            canNext: false,
             currentQuestionIndex: 0,
             currentQuestion: {},
             currentAnswer: [false,false,false,false], //[a,b,c,d]
@@ -94,7 +95,7 @@ export default class Quiz extends React.Component  {
     onAnswerSelect(selectedAnswerIndex) {
         let answer = [false, false, false, false];
         answer[selectedAnswerIndex]  = true;
-        this.setState({ currentAnswer: answer});
+        this.setState({ currentAnswer: answer, canNext: true});
     }
 
     onClickBackBtn() {
@@ -111,6 +112,7 @@ export default class Quiz extends React.Component  {
         else {
             this.saveAnswer();
             this.getNextQuestion();
+            this.setState({canNext: false})
         }
     }
 
@@ -212,6 +214,8 @@ export default class Quiz extends React.Component  {
         });  
     }
 
+
+
     
 
 
@@ -227,7 +231,7 @@ export default class Quiz extends React.Component  {
                <div className="quiz_question green">
                     <p>{this.state.currentQuestion.questionValue}</p>
                     <button className="back_btn" onClick={() => this.onClickBackBtn()}>COFNIJ</button>
-                    <button className="next_btn" onClick={() => this.onClickNextBtn()}>DALEJ</button>
+                    <button className="next_btn" disabled={!this.state.canNext} onClick={() => this.onClickNextBtn()}>DALEJ</button>
                 </div>
                 <div className="think" style={logo}></div>
                 <div className="quiz_answers">
