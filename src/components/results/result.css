@@ -1,3 +1,8 @@
 .reslut_component {
-    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-image: url("impreza.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
