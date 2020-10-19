@@ -1,0 +1,62 @@
+.dashboard_component
+{
+    margin-top: auto;
+    height: 100%;
+    width: 100%;
+    background-image: url("bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.dashboard_title
+{
+    
+    margin: auto;
+    width: 70%;
+    font-size: 5em;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+}
+
+.dashboard_buttons
+{
+    margin: auto;
+    width:  80%;
+}
+
+.dashboard_buttons button 
+{
+    color: black;
+    border-radius: 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    outline:none;
+}
+
+.play_button
+{
+    background-color: #89E163;
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 20px);
+}
+
+.link_button
+{
+    background-color: #89E163;
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 20px);
+}
+
+button:hover {
+    background-color: white;
+    color: #89E163;
+  }
+
