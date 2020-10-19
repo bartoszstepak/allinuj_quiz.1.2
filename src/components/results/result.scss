@@ -62,8 +62,8 @@
 }
 
 button:hover {
-    background-color: white;
-    color: #89E163;
+    background-color: white !important;
+    color: black;
   }
 
 
@@ -76,17 +76,6 @@ button:hover {
     width: 160px;
     height: 192px;
     z-index: 0;
-}
-
-.bbl {
-    position: absolute;
-    top: 0px;
-    right: 160px;
-    width: 160px;
-    height: 190px;
-    z-index: 0;
-    transform: rotate(-60deg);
-
 }
 
 

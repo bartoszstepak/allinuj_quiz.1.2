@@ -25,6 +25,10 @@ export default class Impreza extends React.Component {
             backgroundSize: 'cover',
         }
 
+        const buttonColors = {
+            backgroundColor: '#883E95'
+        }
+
 
         return (
             <div className="reslut_component">
@@ -36,9 +40,10 @@ export default class Impreza extends React.Component {
               <div className="allinuj_logo_absolute" style={logo}></div>
                 <div className="final_text green">
                     <p>qweqweqweqwe</p>
-                    <button className="back_btn">COFNIJ</button>
-                    <button className="next_btn">DALEJ</button>
-                </div>
+                    <button className="back_btn" style={buttonColors} onClick={() => this.props.history.push('/')}>Zagraj ponownie</button>
+                    <a rel="noopener noreferrer" href="https://www.facebook.com/events/360442518612991" target="_blank">
+                        <button className="next_btn">Zobacz rekrutację</button>
+                    </a>                </div>
             </div>
         )
     }

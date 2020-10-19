@@ -13,38 +13,61 @@ export default class Quiz extends React.Component  {
             currentQuestionIndex: 0,
             currentQuestion: {},
             currentAnswer: [false,false,false,false], //[a,b,c,d]
-            result: 0,
+            result: {
+                impreza: 0, // 1
+                sport: 0,   // 2
+                nauka: 0,   // 3
+                kultura: 0  // 4
+            },
             answers: [],
+            answerTypes: {
+                a: 0, b: 1, c:2, d:3
+            },
             questions: [
                 {
                     questionValue:"JAKI JEST WEDŁUG CIEBIE NAJLESZY FILAR?",
-                    a: {
-                        value: "Impreza", key: "1"
+                    answers:[{
+                        value: "sport", key: 2
                     },
-                    b: {
-                        value: "Impreza", key: "1"
+                    {
+                        value: "impreza", key: 1
                     },
-                    c: {
-                        value: "Impreza", key: "1"
+                    {
+                        value: "kultura", key: 4
                     },
-                    d: {
-                        value: "Impreza", key: "1"
-                    },
+                    {
+                        value: "nauka", key: 3
+                    }]
                 },
                 {
-                    questionValue:"DLACZEGO DLACZEGO DLACZEGO DLACZEGODLACZEGODLACZEGO DLACZEGODLACZEGODLACZEGO UWAŻASZ ŻE IMPREZA?",
-                    a: {
-                        value: "Odpowiedzi musza być krutkie", key: "1"
+                    questionValue:"JAKI JEST WEDŁUG CIEBIE NAJLESZY FILAR?",
+                    answers:[{
+                        value: "sport", key: 2
                     },
-                    b: {
-                        value: "Pytania też", key: "1"
+                    {
+                        value: "impreza", key: 1
                     },
-                    c: {
-                        value: "Ludzie nie lubią dużo czytac", key: "1"
+                    {
+                        value: "kultura", key: 4
                     },
-                    d: {
-                        value: "i ma być śmiesznie", key: "1"
+                    {
+                        value: "nauka", key: 3
+                    }]
+                },
+                {
+                    questionValue:"DLACZEGO  UWAŻASZ ŻE IMPREZA?",
+                    answers:[{
+                        value: "sport", key: 2
                     },
+                    {
+                        value: "kultura", key: 4
+                    },
+                    {
+                        value: "impreza", key: 1
+                    },
+                    {
+                        value: "nauka", key: 3
+                    }]
                 }
             ]
         }
@@ -52,12 +75,19 @@ export default class Quiz extends React.Component  {
 
     componentWillMount() {
         let answers = [];
+
         for(let i = 0; i < this.state.questions.length; i++ ) {
             answers.push([false,false,false,false]);
         }
         this.setState({ 
             currentQuestion: this.state.questions[this.state.currentQuestionIndex],
-            answers: answers
+            answers: answers,
+            result: {
+                impreza: 0, // 1
+                sport: 0,   // 2
+                nauka: 0,   // 3
+                kultura: 0  // 4
+            }
         })
     }
 
@@ -110,18 +140,67 @@ export default class Quiz extends React.Component  {
 
     goToReslutPrezentation() {
         let result = this.calculateResult()
-        if (result > 0) {
-            this.redirectToResultSite(result);
+        let arr = [result.impreza, result.sport, result.nauka, result.kultura];
+        arr.sort();
+        let max = arr[arr.length-1];
+        if (max === result.impreza) {
+            this.redirectToResultSite(1);
+        }
+        else if (max === result.sport) {
+            this.redirectToResultSite(2);
+        }
+        else if (max === result.nauka) {
+            this.redirectToResultSite(3);
+        }
+        else if (max === result.kultura) {
+            this.redirectToResultSite(4);
         }
     }
 
     calculateResult() {
-        return 1;    
+        let result = this.state.result
+        for (let i = 0; i < this.state.answers.length; i++) {
+            let answerBoolArray = this.state.answers[i];
+            if(i == this.state.answers.length-1) {
+                answerBoolArray = this.state.currentAnswer;
+            }
+            let answerPosistion = -1
+            for(let j = 0; j < 4; j++) {
+                if (answerBoolArray[j] === true) {
+                    answerPosistion = j;
+                    break;
+                }
+            }
+            let question = this.state.questions[i];
+            if (answerPosistion>=0) {
+                let answer = question.answers[answerPosistion];
+                if (answer.key === 1) {
+                    result.impreza += 1;
+                }
+                else if (answer.key === 2) {
+                    result.sport += 1;
+                }
+                else if (answer.key === 3) {
+                    result.nauka += 1;
+                }
+                else if (answer.key === 4) {
+                    result.kultura += 1;
+                }
+            }
+        }
+        this.setState({result: result})
+        return result
     }
 
-    redirectToResultSite(result) {
-        if(result === 1) {
+    redirectToResultSite(redirectSiteNumber) {
+        if(redirectSiteNumber === 1) {
             this.props.history.push("/result/impreza");
+        } else if(redirectSiteNumber === 2) {
+            this.props.history.push("/result/sport");
+        }else if(redirectSiteNumber === 3) {
+            this.props.history.push("/result/nauka");
+        }else if(redirectSiteNumber === 4) {
+            this.props.history.push("/result/kultura");
         }
     }
 
@@ -156,25 +235,25 @@ export default class Quiz extends React.Component  {
                     {this.state.currentAnswer[0] ? 
                         <img src={selectedImg} onClick={() => this.onAnswerSelect(0)} alt=""  width="50" height="45"/> :
                         <img src={selectImg} onClick={() => this.onAnswerSelect(0)} alt=""  width="50" height="45"/>}
-                    {this.state.currentQuestion.a.value}
+                    {this.state.currentQuestion.answers[0].value}
                  </li>
                 <li>
                     {this.state.currentAnswer[1] ? 
                         <img src={selectedImg} onClick={() => this.onAnswerSelect(1)} alt=""  width="50" height="45"/> :
                         <img src={selectImg} onClick={() => this.onAnswerSelect(1)} alt=""  width="50" height="45"/>}
-                    {this.state.currentQuestion.b.value}
+                    {this.state.currentQuestion.answers[1].value}
                 </li>
                 <li>
                     {this.state.currentAnswer[2] ? 
                         <img src={selectedImg} onClick={() => this.onAnswerSelect(2)} alt=""  width="50" height="45"/> :
                         <img src={selectImg} onClick={() => this.onAnswerSelect(2)} alt=""  width="50" height="45"/>}
-                    {this.state.currentQuestion.c.value}
+                    {this.state.currentQuestion.answers[2].value}
                     </li>
                 <li>
                     {this.state.currentAnswer[3] ? 
                         <img src={selectedImg} onClick={() => this.onAnswerSelect(3)} alt=""  width="50" height="45"/> :
                         <img src={selectImg} onClick={() => this.onAnswerSelect(3)} alt=""  width="50" height="45"/>}
-                    {this.state.currentQuestion.d.value}
+                    {this.state.currentQuestion.answers[3].value}
                     </li>
                 </div>
             </div>

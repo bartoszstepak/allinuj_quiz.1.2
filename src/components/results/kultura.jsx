@@ -25,15 +25,25 @@ export default class kultura extends React.Component {
             backgroundSize: 'cover',
         }
 
+        const buttonColors = {
+            backgroundColor: '#9C815B'
+        }
+
+
         return (
             <div className="reslut_component">
+                <div class="pyro">
+                <div class="before"></div>
+                <div class="after"></div>
+                </div>
               <div className="logo_photo" style={style}></div>
               <div className="allinuj_logo_absolute" style={logo}></div>
                 <div className="final_text green">
                     <p>qweqweqweqwe</p>
-                    <button className="back_btn">COFNIJ</button>
-                    <button className="next_btn">DALEJ</button>
-                </div>
+                    <button className="back_btn" style={buttonColors} onClick={() => this.props.history.push('/')}>Zagraj ponownie</button>
+                    <a rel="noopener noreferrer" href="https://www.facebook.com/events/360442518612991" target="_blank">
+                        <button className="link_button">Zobacz rekrutację</button>
+                    </a>                </div>
             </div>
         )
     }
