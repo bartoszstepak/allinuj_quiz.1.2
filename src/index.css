@@ -11,6 +11,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 1120px;
+  background-color: #171616;
+  overflow: auto;
 }
 
 code {

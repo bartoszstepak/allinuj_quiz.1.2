@@ -26,48 +26,212 @@ export default class Quiz extends React.Component  {
             },
             questions: [
                 {
-                    questionValue:"JAKI JEST WEDŁUG CIEBIE NAJLESZY FILAR?",
-                    answers:[{
-                        value: "sport", key: 2
+                    questionValue:"CO LUBISZ ROBIĆ W WOLNYM CZASIE?",
+                    answers:[
+                    {
+                        value: "ISC NA MIASTO ZE ZNAJOMYMI", key: 1
                     },
                     {
-                        value: "impreza", key: 1
+                        value: "POBIEGAĆ", key: 2
                     },
                     {
-                        value: "kultura", key: 4
+                        value: "CHODZIĆ DO TEATRU ", key: 4
                     },
                     {
-                        value: "nauka", key: 3
+                        value: "CZYTAĆ KSIĄŻKI", key: 3
                     }]
                 },
                 {
-                    questionValue:"JAKI JEST WEDŁUG CIEBIE SUPER EKSTRA NAJLESZY FILAR?",
-                    answers:[{
-                        value: "sport", key: 2
-                    },
-                    {
-                        value: "impreza", key: 1
-                    },
-                    {
-                        value: "kultura", key: 4
-                    },
-                    {
-                        value: "nauka", key: 3
-                    }]
+                    questionValue:"JAKI PROJEKT ZROBIŁ NA TOBIE NAJWIĘKSZE WRAŻENIE? (JEŚLI JESZCZE o NICH NIE SŁYSZAŁEŚ/ŁAŚ TO ZAPRASZAMY NA FP ALL IN UJ NA FB)",
+                    answers:[
+                        {
+                            value: "BOHATERUN", key: 2
+                        },
+                        {
+                            value: "STUDENCKI STAND UP/ DISNEY KARAOKE", key: 1
+                        },
+                        {
+                            value: "GALA CHODŹŻE DO TEATRU", key: 4
+                        },
+                        {
+                            value: "NAUKOWIEC", key: 3
+                        }
+                ]
                 },
                 {
-                    questionValue:"DLACZEGO  UWAŻASZ ŻE IMPREZA?",
+                    questionValue:"JAKIE OKREŚLENIE PASUJE DO CIEBIE NAJBARDZIEJ?",
+                    answers:[
+                        {
+                            value: "NAUKOWIEC", key: 3
+                        },
+                        {
+                            value: "SPORTOWIEC", key: 2
+                        },
+                        {
+                            value: "IMPREZOWICZ", key: 1
+                        },
+                        {
+                            value: "ARTYSTYCZNA DUSZA", key: 4
+                        }
+                        
+                ]
+                },
+                {
+                    questionValue:"JAKI NAPÓJ WYBIERASZ NA SPOTKANIU ZE ZNAJOMYMI",
+                    answers:[
+                    
+                    {
+                        value: "DRINK ", key: 1
+                    },
+                    {
+                        value: "WODA", key: 2
+                    },
+                    {
+                        value: "WINO ", key: 4
+                    },
+                    {
+                        value: "HERBATA", key: 3
+                    }
+                ]
+                },
+                {
+                    questionValue:"JAKI FILM NAJCHĘTNIEJ BYŚ OBEJRZAŁ/OBEJRZAŁA:",
+                    answers:[
+                   
+                    
+                   
+                    {
+                        value: "ODYSEJA KOSMICZNA", key: 3
+                    },
+                    {
+                        value: "SEX W WIELKIM MIEŚCIE", key: 1
+                    },
+                    {
+                        value: "KOD DA VINCI", key: 4
+                    },
+                    {
+                        value: "ROCKY", key: 2
+                    }
+                ]
+                },
+                {
+                    questionValue:"Z KIM CHCIAŁABYŚ ZROBIĆ PANEL DYSKUSYJNY? ",
+                    answers:[
+                    
+                    {
+                        value: "DAWID PODSIADŁO", key: 1
+                    },
+                    {
+                        value: "JAN KOMASA ", key: 4
+                    },
+                    {
+                        value: "MARTYNA WOJCIECHOWSKA", key: 3
+                    },
+                    {
+                        value: "IGA ŚWIĄTEK", key: 2
+                    }
+                ]
+                },
+                {
+                    questionValue:"JAKI PRZEDMIOT W SZKOLE BYŁ TWOIM ULUBIONYM?",
+                    answers:[
+                    {
+                        value: "WYCHOWANIE FIZYCZNE", key: 2
+                    },
+                    {
+                        value: "ŻADEN, CHODZIŁEM_AM NA WAGARY", key: 1
+                    },
+                    {
+                        value: "JĘZYK POLSKI", key: 4
+                    },
+                    {
+                        value: "BIOLOGIA ", key: 3
+                    }
+                ]
+                },
+                {
+                    questionValue:"JAKIE PRZEKĄSKI WYBRAŁBYŚ/WYBRAŁABYŚ NA SPOTKANIE TOWARZYSKIE? ",
+                    answers:[
+                   
+                    {
+                        value: "NACHOS ", key: 1
+                    },
+                    {
+                        value: "BRUSCHETTA ", key: 4
+                    },
+                    {
+                        value: "BISZKOPTY", key: 2
+                    },
+                    {
+                        value: "PALUSZKI", key: 3
+                    }
+                ]
+                },
+                {
+                    questionValue:"TWOJA UCZELNIA MARZEŃ TO:",
+                    answers:[
+                    {
+                        value: "STANFORD", key: 2
+                    },
+                    {
+                        value: "OXFORD ", key: 1
+                    },
+                    {
+                        value: "JUILLIARD ", key: 4
+                    },
+                    {
+                        value: "HARVARD ", key: 3
+                    }
+                ]
+                },
+                {
+                    questionValue:" W LUDZIACH NAJBARDZIEJ LUBIĘ TO, GDY:",
+                    answers:[
+                    {
+                        value: "MOTYWUJĄ MNIE DO SPĘDZANIA AKTYWNIE CZASU", key: 2
+                    },
+                    {
+                        value: "MOGĘ Z NIMI ROZMAWIAĆ GODZINAMI NA DOWOLNE TEMATY", key: 3
+                    },
+                    {
+                        value: "WSPÓLNIE DZIAŁAMY TWÓRCZO I POBUDZAĆ SWOJĄ KREATYWNOŚĆ", key: 4
+                    },
+                    {
+                        value: "ZAPOMINAM PRZY NICH O ZMARTWIENIACH I DOBRZE SIĘ BAWIĘ", key: 1
+                    }
+                ]
+                },
+                {
+                    questionValue:"GDYBYM MIAŁ/-A SUPER MOC TO BYŁOBY TO:",
+                    answers:[
+                        {
+                            value: "CZYTANIE W MYŚLACH", key: 3
+                        },
+                    {
+                        value: "NADLUDZKA SIŁA", key: 2
+                    },
+                    {
+                        value: "ZARAŻANIE TAŃCEM I POZYTYWNĄ ENERGIĄ", key: 1
+                    },
+                    {
+                        value: "OŻYWIANIE NARYSOWANYCH PRZEDMIOTÓW ", key: 4
+                    }
+                ]
+                },
+                {
+                    questionValue:" MOJĄ NAJWIĘKSZĄ ZALETĄ JEST:",
                     answers:[{
-                        value: "sport", key: 2
+                        value: "ENERGICZNOŚĆ", key: 2
                     },
                     {
-                        value: "kultura", key: 4
+                        value: "SPONTANICZNOŚĆ", key: 1
                     },
                     {
-                        value: "impreza", key: 1
+                        value: "KREATYWNOŚĆ", key: 4
                     },
+                    
                     {
-                        value: "nauka", key: 3
+                        value: "OTWARTOŚĆ UMYSŁU ", key: 3
                     }]
                 }
             ]
@@ -163,7 +327,7 @@ export default class Quiz extends React.Component  {
         let result = this.state.result
         for (let i = 0; i < this.state.answers.length; i++) {
             let answerBoolArray = this.state.answers[i];
-            if(i == this.state.answers.length-1) {
+            if(i === this.state.answers.length-1) {
                 answerBoolArray = this.state.currentAnswer;
             }
             let answerPosistion = -1

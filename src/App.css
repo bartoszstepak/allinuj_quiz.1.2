@@ -1,4 +1,7 @@
 #root
 {
   height: 100vh;
+  background-color: #171616;
+  overflow-y: auto;
+  overflow-x: auto;
 }

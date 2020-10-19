@@ -38,12 +38,16 @@ export default class Nauka extends React.Component {
                 </div>
               <div className="logo_photo" style={style}></div>
               <div className="allinuj_logo_absolute" style={logo}></div>
-                <div className="final_text green">
-                    <p>qweqweqweqwe</p>
+              <div className="final_text green">
+                    <p style={{ marginLeft: '-10px' }}>Nauka: Gratulacje!</p>
+                    <span style={{ color: "white", fontSize: "1.5em" }}>
+                    Jesteś człowiekiem wiedzy i filar nauka czeka na Ciebie! Masz otwarty umysł, a swoimi spostrzeżeniami potrafisz zainteresować każdego. Uwielbiasz poznawać świat i ludzi, każda nowość jest dla Ciebie intrygującym materiałem do analizy i dyskusji. Tematy tabu? Nie istnieją! Twoją misją jest uświadamianie ludzi i mówienie głośno o tym, co może kontrowersyjne, ale potrzebne! Prowadzenie spotkań z inspirującymi naukowcami czy podróżnikami to Twoje marzenie. Ciekawość świata pragnie zaspokojenia, a Twoja wiedza chcę się sobą dzielić!                     
+                    </span> <br/><br/><br/>
                     <button className="back_btn" style={buttonColors} onClick={() => this.props.history.push('/')}>Zagraj ponownie</button>
                     <a rel="noopener noreferrer" href="https://www.facebook.com/events/360442518612991" target="_blank">
-                        <button className="link_button">Zobacz rekrutację</button>
-                    </a>                </div>
+                        <button className="next_btn">Zobacz rekrutację</button>
+                    </a>
+                </div>
             </div>
         )
     }
