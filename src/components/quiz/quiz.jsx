@@ -247,6 +247,7 @@ export default class Quiz extends React.Component  {
         this.setState({ 
             currentQuestion: this.state.questions[this.state.currentQuestionIndex],
             answers: answers,
+            canNext: false,
             result: {
                 impreza: 0, // 1
                 sport: 0,   // 2
