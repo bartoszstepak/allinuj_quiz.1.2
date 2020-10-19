@@ -2,7 +2,7 @@ import React from 'react'
 import Background from './img/im.png'
 import Logo from './img/allinuj.png'
 
-import './result.css'
+import './result.scss'
 
 export default class Impreza extends React.Component {
     constructor(props) {
@@ -25,8 +25,13 @@ export default class Impreza extends React.Component {
             backgroundSize: 'cover',
         }
 
+
         return (
             <div className="reslut_component">
+                <div class="pyro">
+                <div class="before"></div>
+                <div class="after"></div>
+                </div>
               <div className="logo_photo" style={style}></div>
               <div className="allinuj_logo_absolute" style={logo}></div>
                 <div className="final_text green">

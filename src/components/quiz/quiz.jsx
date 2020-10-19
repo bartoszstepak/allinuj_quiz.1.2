@@ -32,7 +32,7 @@ export default class Quiz extends React.Component  {
                     },
                 },
                 {
-                    questionValue:"DLACZEGO UWAŻASZ ŻE IMPREZA?",
+                    questionValue:"DLACZEGO DLACZEGO DLACZEGO DLACZEGODLACZEGODLACZEGO DLACZEGODLACZEGODLACZEGO UWAŻASZ ŻE IMPREZA?",
                     a: {
                         value: "Odpowiedzi musza być krutkie", key: "1"
                     },
@@ -149,8 +149,8 @@ export default class Quiz extends React.Component  {
                     <p>{this.state.currentQuestion.questionValue}</p>
                     <button className="back_btn" onClick={() => this.onClickBackBtn()}>COFNIJ</button>
                     <button className="next_btn" onClick={() => this.onClickNextBtn()}>DALEJ</button>
-                    <div className="think" style={logo}></div>
                 </div>
+                <div className="think" style={logo}></div>
                 <div className="quiz_answers">
                 <li>
                     {this.state.currentAnswer[0] ? 

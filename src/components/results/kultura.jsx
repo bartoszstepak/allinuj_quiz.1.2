@@ -2,7 +2,7 @@ import React from 'react'
 import Background from './img/ku.png'
 import Logo from './img/allinuj.png'
 
-import './result.css'
+import './result.scss'
 
 export default class kultura extends React.Component {
     constructor(props) {

@@ -2,7 +2,7 @@ import React from 'react'
 import Background from './img/na.png'
 import Logo from './img/allinuj.png'
 
-import './result.css'
+import './result.scss'
 
 export default class Nauka extends React.Component {
     constructor(props) {

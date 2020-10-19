@@ -2,7 +2,7 @@ import React from 'react'
 import Background from './img/sp.png'
 import Logo from './img/allinuj.png'
 
-import './result.css'
+import './result.scss'
 
 export default class Sport extends React.Component {
     constructor(props) {
