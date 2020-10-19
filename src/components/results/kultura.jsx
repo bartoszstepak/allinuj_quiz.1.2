@@ -1,9 +1,10 @@
 import React from 'react'
-
+import Background from './img/ku.png'
+import Logo from './img/allinuj.png'
 
 import './result.css'
 
-export default class Kultura extends React.Component {
+export default class kultura extends React.Component {
     constructor(props) {
         super(props)
 
@@ -12,9 +13,27 @@ export default class Kultura extends React.Component {
     }
 
     render() {
+        const style = {
+            backgroundImage: `url(${Background})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+          };
+
+        const logo  = {
+            backgroundImage: `url(${Logo})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+        }
+
         return (
             <div className="reslut_component">
-              wynik 
+              <div className="logo_photo" style={style}></div>
+              <div className="allinuj_logo_absolute" style={logo}></div>
+                <div className="final_text green">
+                    <p>qweqweqweqwe</p>
+                    <button className="back_btn">COFNIJ</button>
+                    <button className="next_btn">DALEJ</button>
+                </div>
             </div>
         )
     }

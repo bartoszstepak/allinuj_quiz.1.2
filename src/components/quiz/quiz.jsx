@@ -2,7 +2,7 @@ import React from 'react'
 
 import selectImg from "./select.png"
 import selectedImg from "./selected.png"
-
+import Logo from "./think.gif"
 import './quiz.css'
 
 export default class Quiz extends React.Component  {
@@ -137,12 +137,19 @@ export default class Quiz extends React.Component  {
 
 
     render() {
+        const logo  = {
+            backgroundImage: `url(${Logo})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+        }
+
         return (
             <div className="quiz_component">
                <div className="quiz_question green">
                     <p>{this.state.currentQuestion.questionValue}</p>
                     <button className="back_btn" onClick={() => this.onClickBackBtn()}>COFNIJ</button>
                     <button className="next_btn" onClick={() => this.onClickNextBtn()}>DALEJ</button>
+                    <div className="think" style={logo}></div>
                 </div>
                 <div className="quiz_answers">
                 <li>

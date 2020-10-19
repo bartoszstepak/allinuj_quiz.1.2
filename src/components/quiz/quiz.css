@@ -73,4 +73,13 @@
 button:hover {
     background-color: white;
     color: #89E163;
-  }
+}
+
+.think {
+    position: absolute;
+    bottom: 0px;
+    left:  100px;
+    width: 181px;
+    height: 192px;
+    z-index: 0;
+}
