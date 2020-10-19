@@ -10,6 +10,7 @@ body {
   background-image: url("bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
+  min-width: 1120px;
 }
 
 code {
