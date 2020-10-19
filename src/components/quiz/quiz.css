@@ -29,7 +29,19 @@
 .quiz_answers {
     color: white;
     width: 55%;
-    padding: 20px;
+    padding: 20px 20px 20px 80px;
+    justify-content: left;
+    align-items: center;
+    display: grid;
+    float: left;
+}
+
+.quiz_answers li {
+    font-size: 1.5em;
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+
 }
 
 .quiz_question button 
