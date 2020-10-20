@@ -43,7 +43,7 @@ export default class Quiz extends React.Component  {
                     }]
                 },
                 {
-                    questionValue:"JAKI PROJEKT ZROBIŁ NA TOBIE NAJWIĘKSZE WRAŻENIE? (JEŚLI JESZCZE o NICH NIE SŁYSZAŁEŚ/ŁAŚ TO ZAPRASZAMY NA FP ALL IN UJ NA FB)",
+                    questionValue:"JAKI PROJEKT ZROBIŁ NA TOBIE NAJWIĘKSZE WRAŻENIE? (JEŚLI JESZCZE O NICH NIE SŁYSZAŁEŚ/ŁAŚ TO ZAPRASZAMY NA FP ALL IN UJ NA FB)",
                     answers:[
                         {
                             value: "BOHATERUN", key: 2
