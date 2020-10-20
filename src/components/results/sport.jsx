@@ -39,7 +39,7 @@ export default class Sport extends React.Component {
                 <div className="logo_photo" style={style}></div>
                 <div className="allinuj_logo_absolute" style={logo}></div>
                 <div className="final_text green">
-                    <p style={{ fontSize: '3em' }}>Kultura: Gratulacje!</p>
+                    <p style={{ fontSize: '3em' }}>Sport: Gratulacje!</p>
                     <span style={{ color: "white", fontSize: "1.5em" }}>
                         Jesteś  typem sportowego świra, oczywiście w samych pozytywach tego słowa znaczeniu! Lubisz wyzwania i z determinacją osiągasz kolejne postawione sobie cele. Dobrze wiesz, że w zdrowym ciele, zdrowy duch. Ważne jest dla Ciebie prowadzenie zdrowego i aktywnego stylu życia! Bieganie, siłownia czy sporty zespołowe nie są Ci obce. Czujesz się w tym jak ryba w wodzie. Jednak sportowiec to nie tylko ciągłe ćwiczenia, ale też czas na odpoczynek czy zabawę.  Z pewnością wtedy lubisz również oglądnąć dobry film, czy sięgnąć po książkę czy spędzić miło czas w towarzystwie! Oby tak dalej!
                     </span><br/><br/><br/>
