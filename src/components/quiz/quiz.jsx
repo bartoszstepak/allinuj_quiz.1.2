@@ -10,6 +10,7 @@ export default class Quiz extends React.Component  {
         super(props)
 
         this.state = {
+            width: 0, height: 0,
             canNext: false,
             currentQuestionIndex: 0,
             currentQuestion: {},
@@ -54,7 +55,7 @@ export default class Quiz extends React.Component  {
                             value: "GALA CHODŹŻE DO TEATRU", key: 4
                         },
                         {
-                            value: "NAUKOWIEC", key: 3
+                            value: "TYDZIEŃ EDUKACJI SEKSUALNEJ", key: 3
                         }
                 ]
                 },
@@ -236,6 +237,9 @@ export default class Quiz extends React.Component  {
                 }
             ]
         }
+
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+
     }
 
     componentWillMount() {
@@ -256,6 +260,20 @@ export default class Quiz extends React.Component  {
             }
         })
     }
+
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+      }
+      
+      updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+      }
 
     onAnswerSelect(selectedAnswerIndex) {
         let answer = [false, false, false, false];
@@ -395,8 +413,12 @@ export default class Quiz extends React.Component  {
             <div className="quiz_component">
                <div className="quiz_question green">
                     <p>{this.state.currentQuestion.questionValue}</p>
-                    <button className="back_btn" onClick={() => this.onClickBackBtn()}>COFNIJ</button>
-                    <button className="next_btn" disabled={!this.state.canNext} onClick={() => this.onClickNextBtn()}>DALEJ</button>
+                    {this.state.width < 1200 ? "" : <section>
+                        <button className="back_btn" onClick={() => this.onClickBackBtn()}>COFNIJ</button>
+                        <button className="next_btn" disabled={!this.state.canNext} onClick={() => this.onClickNextBtn()}>DALEJ</button>
+                        </section>
+                    }
+                   
                 </div>
                 <div className="think" style={logo}></div>
                 <div className="quiz_answers">
@@ -425,6 +447,11 @@ export default class Quiz extends React.Component  {
                     {this.state.currentQuestion.answers[3].value}
                     </li>
                 </div>
+                {this.state.width < 1200 ? <section className="buttons_mobile">
+                        <button className="next_btn" disabled={!this.state.canNext} onClick={() => this.onClickNextBtn()}>DALEJ</button>
+                        <button className="back_btn" onClick={() => this.onClickBackBtn()}>COFNIJ</button>
+                        </section> : ""
+                    }
             </div>
         )
     }

@@ -39,7 +39,7 @@ export default class kultura extends React.Component {
                 <div className="logo_photo" style={style}></div>
                 <div className="allinuj_logo_absolute" style={logo}></div>
                 <div className="final_text green">
-                    <p style={{ marginLeft: '-10px', fontSize: '3em' }}>Kultura: Gratulacje!</p>
+                    <p style={{ fontSize: '3em' }}>Kultura: Gratulacje!</p>
                     <span style={{ color: "white", fontSize: "1.5em" }}>
                     Jesteś człowiekiem kultury! W piątki chodzisz do kina, a wino Ci najbardziej smakuje na wernisażach, to dwa z wielu powodów, dla których filar Kultura powinien na stałe zagościć w Twoim życiu. Masz zapał do poznawania krakowskich artystów, a muzyka jest lekiem na każde Twoje zmartwienie. Urokliwe spacery i odkrywanie Krakowskich zakamarków nie jest Ci obce. Moda? Jasne! Cenisz sobie elegancję i styl, jednak nie zamykasz się w jednym trendzie.                    
                     </span><br /><br/><br/>

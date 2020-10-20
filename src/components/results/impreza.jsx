@@ -39,7 +39,7 @@ export default class Impreza extends React.Component {
                 <div className="logo_photo" style={style}></div>
                 <div className="allinuj_logo_absolute" style={logo}></div>
                 <div className="final_text">
-                    <p style={{ marginLeft: '-10px', fontSize: '3em' }}>Impreza: Gratulacje!</p>
+                    <p style={{ fontSize: '3em' }}>Impreza: Gratulacje!</p>
                     <span style={{ color: "white", fontSize: "1.5em" }}>
                         Jesteś typem imprezowicza, dlatego idealnym filarem dla Ciebie jest Impreza! Jesteś otwartą osobą, która zaraża ludzi swoją pozytywną energią i uśmiechem. Potrafisz sprawić, że ludzie czują się przy tobie świetnie! Rozkręcasz każdą większą imprezę czy skromną domówkę. Gdy wchodzisz na balety każdy wie, że impreza zaczyna się właśnie teraz! Nie straszne Ci poranne powroty do domu ani spontaniczne wyjście na miasto. Lubisz pyszne drinki i smaczne przekąski!
                     </span><br /><br /><br />

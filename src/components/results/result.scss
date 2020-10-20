@@ -79,6 +79,79 @@ button:hover {
     z-index: 0;
 }
 
+@media (max-width: 1200px) {
+
+    .reslut_component {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: #171616;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  .logo_photo {
+      background-image: none !important;
+      display: none !important;
+  }
+
+  .final_text {
+    text-shadow: 2px 2px 4px #000000;
+      width: 45%;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      display: inline;
+  }
+
+  .final_text p {
+      width: 70%;
+      font-size: 2.5em;
+      text-align: center;
+      font-weight: bold;
+      padding-bottom: 40px;
+      color: white;
+  }
+
+
+  .final_text button 
+  {
+      color: black;
+      border-radius: 40px;
+      font-size: 1.5em;
+      font-weight: bold;
+      border: none;
+      outline:none;
+  }
+
+  .next_btn
+  {
+      background-color: #89E163;
+      padding: 20px;
+      margin: 10px;
+      width: calc(50% - 20px);
+  }
+
+  .back_btn
+  {
+      background-color: #89E163;
+      margin: 10px;
+      padding: 20px;
+      width: calc(50% - 20px);
+  }
+
+  button:hover {
+      background-color: white !important;
+      color: black;
+    }
+  
+    .allinuj_logo_absolute {
+      display: none;
+      width: 0px;
+      height: 0px;
+  }
+}
 
 
 $particles: 50;
@@ -151,8 +224,7 @@ $box-shadow2: ();
 
 body {
   margin:0;
-  padding:0;
-  background: #000;
+  padding:0; 
   overflow: hidden;
 }
 

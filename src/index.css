@@ -1,3 +1,8 @@
+html {
+  display: block;
+  height: 100vh;
+}
+
 body {
   margin: 0;
   height: 100%;
@@ -10,7 +15,6 @@ body {
   background-image: url("bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 1120px;
   background-color: #171616;
   overflow: auto;
 }
@@ -30,4 +34,15 @@ button:hover {
 
 a:hover {
   cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+  body {
+    width: 100%;
+    background-color: #171616;
+    overflow: auto;
+    min-width: 360px;
+  }
+  
 }
