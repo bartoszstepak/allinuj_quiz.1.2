@@ -158,10 +158,11 @@ button:hover {
     }
     
     .quiz_answers li {
-        font-size: 1em;
+        font-size: 1.1em;
         list-style-type: none;
         align-items: center;
         display: flex;    
+        font-weight: bold;
         margin-bottom: 15px;
     }
     
