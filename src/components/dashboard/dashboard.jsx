@@ -24,7 +24,7 @@ export default class Dashboard extends React.Component {
                    <span>SPARWDŹ KTÓRY <br/><span className="green">FILAR</span> JEST DLA <span className="green">CIEBIE</span></span>
                </div>
                <div className="dashboard_buttons">
-                    <a rel="noopener noreferrer" href="https://www.facebook.com/events/360442518612991" target="_blank">
+                    <a rel="noopener noreferrer" href="https://www.facebook.com/events/238086861383992" target="_blank">
                         <button className="link_button">Zobacz rekrutację</button>
                     </a>
                     <button className="play_button" onClick={() => this.onClickPlayButton()}>GRAJ</button>
