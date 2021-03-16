@@ -71,7 +71,7 @@ export default class Impreza extends React.Component {
                         Jesteś typem imprezowicza, dlatego idealnym filarem dla Ciebie jest Impreza! Jesteś otwartą osobą, która zaraża ludzi swoją pozytywną energią i uśmiechem. Potrafisz sprawić, że ludzie czują się przy tobie świetnie! Rozkręcasz każdą większą imprezę czy skromną domówkę. Gdy wchodzisz na balety każdy wie, że impreza zaczyna się właśnie teraz! Nie straszne Ci poranne powroty do domu ani spontaniczne wyjście na miasto. Lubisz pyszne drinki i smaczne przekąski!
                     </span><br /><br /><br />
                     <button className="back_btn" style={buttonColors} onClick={() => this.props.history.push('/')}>Zagraj ponownie</button>
-                    <a rel="noopener noreferrer" href="https://www.facebook.com/events/360442518612991" target="_blank">
+                    <a rel="noopener noreferrer" href="https://www.facebook.com/events/238086861383992" target="_blank">
                         <button className="next_btn">Zobacz rekrutację</button>
                     </a>
                 </div>
